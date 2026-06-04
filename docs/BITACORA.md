@@ -24,7 +24,7 @@
 
 **Bloqueos / pendientes:**
 
-- ⚠️ El repo está **PÚBLICO** en GitHub aunque la bitácora de sesión 0 dice "privado" — pendiente hacerlo privado
+- El repo queda **PÚBLICO** por decisión de Emilio (evita fricción de acceso para Claude/agentes) — no es pendiente
 - Trato aún no cerrado; las tareas de Semana 0 sí pueden arrancar ya
 
 **Próximo paso:**
