@@ -9,6 +9,12 @@
 
 ## 🆕 Changelog
 
+### v0.2 (2026-06-04) — Compromiso de 5 semanas
+- **Compromiso con la clienta: 4 módulos completos y en vivo en 5 semanas** desde el anticipo.
+- El plan de fases (sección 5) se re-basea de 12 semanas (~15 h/sem) a 5 semanas con desarrollo intensivo vía Claude Code; el cuello de botella pasa a ser las dependencias externas (decisiones, contenido, altas de cuentas).
+- Se agrega **Semana 0** (pre-arranque, adelantable antes del anticipo): cerrar decisiones, pedir contenido, abrir cuentas, mockup del home, repo listo.
+- Desglose operativo en `docs/PLAN_DESARROLLO.md` (tareas/subtareas para ClickUp vía SLIM).
+
 ### v0.1 (junio 2026) — Borrador para cotización
 - Definición inicial de los 4 módulos con la clienta.
 - Decisión: reservas vía **sincronización iCal** (no channel manager de pago).
@@ -117,19 +123,22 @@ Se parte del monorepo `mobbitrips-web-v2` como template. **Qué se reutiliza:**
 
 ---
 
-## 5. Plan de fases (base para cotizar)
+## 5. Plan de fases — compromiso de 5 semanas
 
-Calibrado a ~15h/semana (mismo ritmo que Mobbitrips). Esfuerzo relativo: S < M < L.
+**Comprometido con la clienta: 4 módulos completos y en vivo en 5 semanas desde el anticipo.** Desarrollo intensivo con Claude Code (la implementación la hace el agente; el tiempo de Emilio es dirección, revisión y QA). Esfuerzo relativo: S < M < L. Desglose operativo completo en `PLAN_DESARROLLO.md`.
 
-| Fase | Semanas | Foco | Esfuerzo |
-|------|---------|------|----------|
-| **Fase 0 — Setup + Diseño** | 1-2 | Repo desde template Mobbitrips, branding KeyHandy, sistema de diseño, home | M |
-| **Fase 1 — Inmobiliaria + Agenda** | 3-4 | Catálogo de inmuebles + fichas + leads + embed de agenda. *Entrega visible temprana* | M |
-| **Fase 2 — Reservas + Pagos** | 5-8 | Fichas de alojamientos, sync iCal, motor de reserva, checkout, emails | L |
-| **Fase 3 — Contenido digital** | 9-10 | Catálogo de productos, checkout, entrega automática post-pago | M |
-| **Fase 4 — Pulido + Lanzamiento** | 11-12 | SEO, analítica, accesibilidad, carga de contenido real, QA, go-live | M |
+| Fase | Semana | Foco | Esfuerzo |
+|------|--------|------|----------|
+| **Semana 0 — Pre-arranque** | antes del anticipo | Cerrar las 7 decisiones, pedir TODO el contenido, abrir cuentas (pasarela/dominio/Resend), mockup del home, repo listo | S |
+| **Fase 0 — Setup + Diseño** | 1 | Repo desde template Mobbitrips, branding KeyHandy, sistema de diseño, home | M |
+| **Fase 1 — Inmobiliaria + Agenda** | 2 | Catálogo de inmuebles + fichas + leads + embed de agenda. *Entrega visible temprana* | M |
+| **Fase 2 — Reservas + Pagos** | 2-4 | Fichas de alojamientos, sync iCal, motor de reserva, checkout, emails | L |
+| **Fase 3 — Contenido digital** | 4 | Catálogo de productos, checkout, entrega automática post-pago | M |
+| **Fase 4 — Pulido + Lanzamiento** | 5 | SEO, analítica, accesibilidad, carga de contenido real, QA, go-live | M |
 
 > El orden pone primero lo más simple (inmobiliaria/agenda) para que la clienta vea avances pronto, y deja lo más complejo (reservas) para cuando el sistema de diseño ya está maduro.
+>
+> ⚠️ **El calendario se sostiene solo si las dependencias externas llegan a tiempo**: decisiones cerradas en Semana 0, contenido de la clienta a fin de semana 1, cuentas verificadas temprano. El riesgo del plan no es la velocidad de desarrollo — son los tiempos de terceros (ver riesgos en `PLAN_DESARROLLO.md`).
 
 ---
 
@@ -174,4 +183,4 @@ web_keyhandy/
 
 ---
 
-**Última actualización**: 2026-06-04 · **Versión**: 0.1 (borrador de cotización)
+**Última actualización**: 2026-06-04 · **Versión**: 0.2 (compromiso de 5 semanas; pendiente promover a v1.0 al recibir anticipo)

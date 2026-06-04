@@ -4,7 +4,31 @@
 > Cubre solo las fases de **desarrollo** (0-4). La etapa de pre-venta/cotización se gestiona aparte (ver `SPRINT_ACTUAL.md`).
 > Fuente de verdad del alcance: `MASTER.md` v0.1. Este plan se ajusta cuando MASTER pase a v1.0 con lo acordado con la clienta.
 >
-> ⚠️ **Condición de arranque:** ninguna tarea de este plan inicia hasta que la clienta confirme el trato.
+> ⏱️ **Compromiso con la clienta: 4 módulos completos y en vivo en 5 semanas**, contadas desde el anticipo.
+> El plan asume desarrollo intensivo con Claude Code (la implementación la hace el agente; las horas estimadas son esfuerzo de referencia para dimensionar, no horas-persona de picar código). El cuello de botella real son las **dependencias externas** (decisiones y contenido de la clienta, altas de cuentas) — ver "Semana 0" y "Riesgos".
+>
+> ⚠️ **Condición de arranque:** las Fases 0-4 inician al recibir el anticipo. La Semana 0 (pre-arranque) puede adelantarse antes.
+
+---
+
+## 🗓️ Calendario comprometido (5 semanas)
+
+| Semana | Fases | Entregable al cierre de la semana |
+|--------|-------|-----------------------------------|
+| **0** (pre-anticipo) | Pre-arranque | 7 decisiones cerradas, branding definido, mockup del home, repo listo |
+| **1** | F0 | Sitio base en Vercel: branding, home, navegación, Supabase con RLS |
+| **2** | F1 + arranque F2 | Inmobiliaria + agenda en vivo (primera entrega visible) · modelo de datos e iCal-sync iniciados |
+| **3** | F2 | Fichas de alojamiento, motor de reserva, checkout en modo test, sync iCal contra OTA real |
+| **4** | F2 cierre + F3 | Reservas punta a punta con emails · contenido digital con entrega automática |
+| **5** | F4 | Contenido real cargado, SEO, accesibilidad, QA integral, **go-live** |
+
+### Semana 0 — Pre-arranque (adelantable antes del anticipo)
+
+- [ ] Cerrar las 7 decisiones pendientes con la clienta (ver tabla final) — **crítico, bloquea todo**
+- [ ] Solicitar a la clienta TODO el contenido: fotos/fichas/precios de alojamientos e inmuebles, URLs iCal de Airbnb/Booking, archivos de cursos/guías/videos — fecha límite de entrega: fin de semana 1
+- [ ] Abrir/verificar cuentas: pasarela de pago (la verificación de Stripe puede tardar días), dominio, Resend, hosting de video
+- [ ] Mockup del home con Claude Design (también sirve como cierre de venta)
+- [ ] Preparar repo desde template Mobbitrips (tarea 0.1 adelantada)
 
 ---
 
@@ -22,13 +46,14 @@ Estructura espejo de la convención ya usada para `🚀 MOBBITRIPS — Backlog C
 - **Prioridad:** las tareas marcadas 🔴 son ruta crítica de su fase; el resto prioridad normal.
 - **Dependencias:** indicadas como `Depende de:` — crearlas como dependencias *waiting on* en ClickUp.
 - **Bloqueos:** las tareas marcadas ⛔ dependen de una decisión pendiente con la clienta (sección final). Etiquetarlas con tag `bloqueada-decision` hasta que se resuelva.
-- **Fechas:** no asignar due dates todavía; se calendarizan al cerrar el trato (ritmo: ~15 h/semana).
+- **Fechas:** asignar due dates por semana según el calendario de 5 semanas en cuanto se conozca la fecha del anticipo (semana 1 = anticipo + 7 días, etc.).
+- **Lista extra:** crear también `⏳ SEMANA 0 — Pre-arranque` con el checklist de la sección "Semana 0" (estas tareas pueden arrancar ya).
 
-**Presupuesto total estimado: ~180 h en 12 semanas** (F0: 30 h · F1: 30 h · F2: 60 h · F3: 30 h · F4: 30 h)
+**Esfuerzo de referencia: ~180 h** (F0: 30 · F1: 30 · F2: 60 · F3: 30 · F4: 30) — comprimido a **5 semanas** vía desarrollo intensivo con Claude Code. Los estimados sirven para dimensionar y priorizar, no como horas-persona.
 
 ---
 
-## F0 · Setup + Diseño — semanas 1-2 · 30 h
+## F0 · Setup + Diseño — semana 1 · ref. 30 h
 
 **Objetivo:** repo funcionando desde el template de Mobbitrips, branding KeyHandy definido y home navegable en Vercel.
 
@@ -57,7 +82,7 @@ Estructura espejo de la convención ya usada para `🚀 MOBBITRIPS — Backlog C
 
 ---
 
-## F1 · Inmobiliaria + Agenda — semanas 3-4 · 30 h
+## F1 · Inmobiliaria + Agenda — semana 2 · ref. 30 h
 
 **Objetivo:** primera entrega visible para la clienta — catálogo de inmuebles con captura de leads y agenda embebida.
 
@@ -87,7 +112,7 @@ Estructura espejo de la convención ya usada para `🚀 MOBBITRIPS — Backlog C
 
 ---
 
-## F2 · Reservas + Pagos — semanas 5-8 · 60 h
+## F2 · Reservas + Pagos — semanas 2-4 · ref. 60 h
 
 **Objetivo:** motor de reservas completo con sincronización iCal y checkout funcionando de punta a punta.
 
@@ -130,7 +155,7 @@ Estructura espejo de la convención ya usada para `🚀 MOBBITRIPS — Backlog C
 
 ---
 
-## F3 · Contenido digital — semanas 9-10 · 30 h
+## F3 · Contenido digital — semana 4 · ref. 30 h
 
 **Objetivo:** venta de cursos/guías/videos con entrega automática post-pago (sin área de miembros).
 
@@ -160,7 +185,7 @@ Estructura espejo de la convención ya usada para `🚀 MOBBITRIPS — Backlog C
 
 ---
 
-## F4 · Pulido + Lanzamiento — semanas 11-12 · 30 h
+## F4 · Pulido + Lanzamiento — semana 5 · ref. 30 h
 
 **Objetivo:** sitio en producción con contenido real, medible y accesible.
 
@@ -188,6 +213,20 @@ Estructura espejo de la convención ya usada para `🚀 MOBBITRIPS — Backlog C
 - Dominio + DNS + dominio de email verificado en Resend — 2 h
 - Pasarela en modo live + smoke test de pago real — 1 h
 - Checklist final y handoff a la clienta — 1 h
+
+---
+
+## ⚠️ Riesgos del calendario de 5 semanas
+
+Lo que la IA **no** comprime — el plan se cae por esto, no por velocidad de desarrollo:
+
+| Riesgo | Impacto | Mitigación |
+|--------|---------|------------|
+| Decisiones de la clienta abiertas al arrancar | Bloquea F0 (branding) y F2 (pasarela) | Cerrar las 7 en Semana 0, antes del anticipo |
+| Contenido real entregado tarde | F4 sin material en semana 5 | Fecha límite de entrega: fin de semana 1; recordatorios desde semana 0 |
+| Verificación de cuenta de pasarela (días) | Checkout en vivo se atrasa | Abrir cuenta en Semana 0/1 aunque se use en semana 3 |
+| Feeds iCal de OTAs (refresco lento, formatos variables) | QA de sync se alarga | Conectar un listing real desde semana 3, no en semana 5 |
+| Dominio/DNS/email no listos | Go-live se atrasa por trámites | Comprar dominio y verificar Resend en semana 1 |
 
 ---
 
