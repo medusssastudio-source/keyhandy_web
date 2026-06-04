@@ -30,13 +30,20 @@
 - Número de alojamientos e inmuebles iniciales
 - ¿Cobra las videollamadas?
 
+**Repo creado:**
+
+- GitHub: `https://github.com/medusssastudio-source/keyhandy_web` (privado, cuenta Medusssa)
+- `mobbimx` agregado como collaborator (es la identidad que pushea desde las máquinas de Emilio)
+- Commit inicial `9724423` en `main`
+
 **Bloqueos:**
 
 - Trato no cerrado aún — no iniciar desarrollo hasta confirmación
 
 **Próximo paso:**
 
-- Presentar cotización a la clienta usando el plan de fases del MASTER.md
-- Al cerrar el trato: crear repo en GitHub, copiar template desde mobbitrips-web-v2, arrancar Fase 0
+- Resolver con la clienta las 7 decisiones pendientes (MASTER.md sección 4) y armar cotización con el plan de fases
+- Opcional pro-venta: mockup del home con Claude Design
+- Al cerrar el trato: copiar template desde mobbitrips-web-v2, arrancar Fase 0
 
 ---
