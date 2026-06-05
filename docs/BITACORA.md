@@ -5,6 +5,35 @@
 
 ---
 
+## 2026-06-05 · Sesión 2 — Adelanto de trabajo sin riesgo (template Medusssa + ical-sync + modelos)
+
+**Etapa**: Pre-venta (trato sin cerrar) · Trabajó con: Emilio (máquina trabajo)
+
+**Estrategia**: adelantar SOLO lo que sirve aunque la clienta no firme → todo se construyó como **activo genérico de Medusssa Studio** en un repo nuevo: `C:\Users\Emilio\medusssa-template` (pendiente crear remoto en GitHub).
+
+**Tasks cerradas (cubren ~30h de tareas críticas del PLAN_DESARROLLO):**
+
+- **Template Medusssa** (cubre tarea 0.1): monorepo limpio derivado de mobbitrips-web-v2 — tooling completo, `@medusssa/ui` (Button con `font-sans`, AnimatedSection, etc.), esqueleto Next.js 14 con branding 100% tokenizado (rebrandear = editar `tailwind.config.ts` + `lib/fonts.ts` + tokens de `globals.css`), email Resend con branding por env vars, CLAUDE.md con reglas inmutables y plantillas de docs. **Verificado: lint ✅ type-check ✅ build ✅**
+- **`@medusssa/ical-sync`** (cubre tarea 2.2, la de mayor riesgo técnico): parser de feeds OTA (folding RFC 5545, VALUE=DATE/DATETIME, escapes), generador de feed propio (CRLF, folding), rangos con checkout exclusivo (`rangesOverlap`/`mergeRanges`/`isRangeAvailable`). **26/26 tests vitest ✅**
+- **Migraciones Supabase genéricas** (cubren tareas 1.1, 2.1, 3.1): events + alojamientos/feeds/rangos/reservas + inmuebles/leads + productos digitales/órdenes. RLS en todo, idempotencia de sync iCal y de webhooks de pago. + tipos TS espejo en `types/db.ts`. *(SQL revisado, pendiente ejecutar contra Supabase real al arrancar el proyecto)*
+
+**Decisiones:**
+
+- El adelanto vive en `medusssa-template` (activo del estudio), NO en keyhandy_web — si la clienta no firma, nada se pierde
+- Pasarela de pago agnóstica en el esquema (`payment_provider`/`payment_ref`) — no bloquea la decisión Stripe vs MercadoPago
+
+**Bloqueos / pendientes:**
+
+- Crear repo GitHub para `medusssa-template` (cuenta Medusssa) y push
+- Mensaje de Semana 0 a la clienta — EN PAUSA por decisión de Emilio
+- Migraciones sin ejecutar contra un Supabase real todavía
+
+**Próximo paso:**
+
+- Al cerrar el trato: clonar template → `keyhandy_web` código, branding KeyHandy, y arrancar F0 con 0.1/2.2/1.1/2.1/3.1 ya resueltas
+
+---
+
 ## 2026-06-04 · Sesión 1 — Plan de desarrollo desglosado y re-baseo a 5 semanas
 
 **Etapa**: Pre-venta (clienta casi confirmada) · Trabajó con: Emilio (máquina casa, `C:\Users\PC\keyhandy_web`)
