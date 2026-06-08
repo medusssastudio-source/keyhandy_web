@@ -5,6 +5,34 @@
 
 ---
 
+## 2026-06-08 · Sesión 3 — Recuperación tras apagón + cierre de pendientes de Semana 0
+
+**Etapa**: Pre-venta (trato sin cerrar) · Trabajó con: Emilio (máquina trabajo)
+
+**Contexto**: la lap se apagó en la sesión anterior; se verificó que **no se perdió nada** (working trees limpios en `keyhandy_web` y `medusssa-template`; commits íntegros).
+
+**Tasks cerradas:**
+
+- **Mensaje de Semana 0 a la clienta** (estaba EN PAUSA): redactado en `docs/MENSAJE_SEMANA0.md` — versión larga (correo) + versión corta (WhatsApp). Cubre los 3 objetivos del plan: las 7 decisiones, petición de contenido con fecha límite (incl. URLs iCal de OTAs), y abrir cuentas que tardan en verificar (pasarela/dominio). Commit `0341940`.
+- **`medusssa-template` respaldado en GitHub** (bloqueo pendiente desde sesión 2): creado repo PÚBLICO `https://github.com/medusssastudio-source/medusssa-template` y push de los 3 commits. Ya no vive solo en disco local.
+
+**Decisiones:**
+
+- `medusssa-template` queda PÚBLICO (consistente con la decisión de keyhandy_web: evitar fricción de acceso para los agentes)
+
+**Bloqueos / pendientes (sin cambios):**
+
+- Trato aún no cerrado — no iniciar desarrollo de producto
+- Migraciones sin ejecutar contra un Supabase real todavía
+- Mensaje de Semana 0 listo para personalizar (`[Nombre]`, `[FECHA]`, firma) y enviar cuando Emilio decida
+
+**Próximo paso:**
+
+- Enviar el mensaje de Semana 0 a la clienta y recolectar las 7 decisiones + contenido
+- Al cerrar el trato: clonar template → código KeyHandy, branding, arrancar F0
+
+---
+
 ## 2026-06-05 · Sesión 2 — Adelanto de trabajo sin riesgo (template Medusssa + ical-sync + modelos)
 
 **Etapa**: Pre-venta (trato sin cerrar) · Trabajó con: Emilio (máquina trabajo)
